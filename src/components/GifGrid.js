@@ -6,9 +6,9 @@ const GifGrid = ({ categoria }) => {
 
   return (
     <>
-      <h3>{categoria}</h3>
-      {loading ? "Cargando..." : "Carga Completa"}
-      <div className="card-grid">
+      <h3 className="animate__pulse">{categoria}</h3>
+      {loading && <p className="animate__shakeX">Cargando...</p>}
+      <div className="card-grid animate__fadeInUp">
         {images.map((img) => {
           return <GifGridItem key={img.id} {...img} />;
         })}

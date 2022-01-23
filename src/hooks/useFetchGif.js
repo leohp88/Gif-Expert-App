@@ -8,12 +8,14 @@ export const useFetchGif = (categoria) => {
   });
 
   useEffect(() => {
-    getGif(categoria).then((img) => {
-      setObjeto({
-        data: img,
-        loading: false,
+    setTimeout(() => {
+      getGif(categoria).then((img) => {
+        setObjeto({
+          data: img,
+          loading: false,
+        });
       });
-    });
+    }, 1500);
   }, [categoria]);
   return objeto;
 };

@@ -14,7 +14,7 @@ const GifExpertApp = (categoria) => {
 
   return (
     <>
-      <h2>GifExpertApp</h2>
+      <h2 className="animate__bounce">GifExpertApp</h2>
       <AddCategorie setCategorie={setCategories} />
       <hr />
 
